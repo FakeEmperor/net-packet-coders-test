@@ -12,10 +12,21 @@ file(GLOB SOURCES_UTILS
         "../npct/utils/*.cc"
 )
 
-file(GLOB SOURCES_NPCT_FULL
-        # root level
-		"../npct/*.h"
-		"../npct/*.cc"
+file(GLOB SOURCES_NPCT
+		# CMD subdir
+		"../npct/cmd/*.h"
+		"../npct/cmd/*.cc"
+		"../npct/cmd/impl/*.h"
+		"../npct/cmd/impl/*.cc"
+		# DATA subdir
+		"../npct/data/*.h"
+		"../npct/data/*.cc"
+		"../npct/data/impl/*.h"
+		"../npct/data/impl/*.cc"
+		# UTILS subdir
+		"../npct/utils/*.h"
+		"../npct/utils/*.cc"
+
 		# first level
 		"../npct/*/*.h"
         "../npct/*/*.cc"
@@ -37,7 +48,7 @@ else()
     file(GLOB MAIN_NPCT "../example_main.cc")
 endif(CMAKE_BUILD_TYPE MATCHES Test)
 
-add_executable(npct ${SOURCES_UTILS} ${SOURCES_NPCT_FULL}
+add_executable(npct ${SOURCES_UTILS} ${SOURCES_NPCT}
         ${MAIN_NPCT})
 
 
