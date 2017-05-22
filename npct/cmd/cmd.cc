@@ -1,11 +1,4 @@
 #include "cmd.h"
-#include <list>
-#include <array>
-#include <iostream>
-#include <random>
-#include <sstream>
-#include <climits>
-#include <cstring>
 
 namespace npct::cmd {
 
@@ -17,18 +10,6 @@ namespace npct::cmd {
     void CommandProcessor::v_opt_check_(const std::string &name) const noexcept(false) {
         if (valued_options_.find(name) == valued_options_.cend())
             throw std::runtime_error("This valued option does not exist");
-    }
-
-    CommandProcessor::CommandProcessor(const std::set<std::string> &valued_options,
-                                       const std::set<std::string> &flag_options) : valued_options_(valued_options),
-                                                                                    flag_options_(flag_options) {
-        // validate
-        for (auto &v : valued_options_)
-            if (flag_options_.find(v) != flag_options_.cend())
-                throw std::runtime_error("Dublicated option");
-        for (auto &v : flag_options_)
-            if (valued_options_.find(v) != valued_options_.cend())
-                throw std::runtime_error("Dublicated option");
     }
 
     std::map<std::string, std::string> CommandProcessor::currentOptions() const {
@@ -98,6 +79,4 @@ namespace npct::cmd {
         auto val = std::string(token.begin() + bg, token.end() - ed);
         return std::make_pair<TokenType, std::string>(std::move(type), std::move(val));
     }
-
-
 }

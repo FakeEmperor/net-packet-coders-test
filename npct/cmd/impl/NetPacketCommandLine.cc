@@ -12,9 +12,7 @@ namespace npct::cmd::impl {
 
 
 ////////
-
-    const std::string CommandLine::HELP_TEXT =
-            "Usage <mode> [parameters...]\r\n\
+    const std::string NetPacketCommandLine::HELP_TEXT = "Usage <mode> [parameters...]\r\n\
 Modes available:\r\n\
   -g - generates 'num_sources'*|'noise_levels'| datasets for an encoding algorithm in \"encode\" mode.\r\n\
 \t Parameters are: -max_source_size <int> -noise_levels <array[float][0..1]> -num_sources <int> -io_sources <str>\r\n\
@@ -32,25 +30,25 @@ E.g.: <array[float[0..1]]> - 0,0.2,0.4,0.8,0.9,1\r\n\
 
 
     const std::string
-            CommandLine::Values::PARAM_NOISE_LEVELS = "noise_levels",
-            CommandLine::Values::PARAM_SOURCE_MAXSIZE = "max_source_size",
-            CommandLine::Values::PARAM_NUM_SOURCES = "num_sources",
-//CommandLine::Values::PARAM_DIFFICULTIES = "difficulties",
+            NetPacketCommandLine::Values::PARAM_NOISE_LEVELS = "noise_levels",
+            NetPacketCommandLine::Values::PARAM_SOURCE_MAXSIZE = "max_source_size",
+            NetPacketCommandLine::Values::PARAM_NUM_SOURCES = "num_sources",
+//NetPacketCommandLine::Values::PARAM_DIFFICULTIES = "difficulties",
 
-            CommandLine::Values::INPUT_ENCODED_DATA = "in_encoded",
-            CommandLine::Values::INPUT_DECODED_DATA = "in_decoded",
-            CommandLine::Values::INOUT_NOISED_DATA = "io_noised",
-            CommandLine::Values::OUTPUT_REPORT = "out_report",
-            CommandLine::Values::INOUT_SOURCE_DATA = "io_source";
+            NetPacketCommandLine::Values::INPUT_ENCODED_DATA = "in_encoded",
+            NetPacketCommandLine::Values::INPUT_DECODED_DATA = "in_decoded",
+            NetPacketCommandLine::Values::INOUT_NOISED_DATA = "io_noised",
+            NetPacketCommandLine::Values::OUTPUT_REPORT = "out_report",
+            NetPacketCommandLine::Values::INOUT_SOURCE_DATA = "io_source";
 
     const std::string
-            CommandLine::Flags::MODE_CHECK_DECODE = "d",
-            CommandLine::Flags::MODE_SEND_DATA = "s",
-            CommandLine::Flags::MODE_GENERATE_DATA = "g";
+            NetPacketCommandLine::Flags::MODE_CHECK_DECODE = "d",
+            NetPacketCommandLine::Flags::MODE_SEND_DATA = "s",
+            NetPacketCommandLine::Flags::MODE_GENERATE_DATA = "g";
 
 
     const std::set<std::string>
-            CommandLine::VALUED_OPTS = {
+            NetPacketCommandLine::VALUED_OPTS = {
             Values::PARAM_NOISE_LEVELS,
             //Values::PARAM_DIFFICULTIES ,
             Values::PARAM_SOURCE_MAXSIZE,
@@ -62,14 +60,14 @@ E.g.: <array[float[0..1]]> - 0,0.2,0.4,0.8,0.9,1\r\n\
             Values::OUTPUT_REPORT,
             Values::INOUT_SOURCE_DATA
     },
-            CommandLine::FLAG_OPTS = {
+            NetPacketCommandLine::FLAG_OPTS = {
             Flags::MODE_CHECK_DECODE,
             Flags::MODE_SEND_DATA,
             Flags::MODE_GENERATE_DATA
     };
 
     template<const std::string &...modes>
-    std::pair<bool, std::string> __check_must_be_in(const CommandLine &cmd, const std::string &name, bool has) {
+    std::pair<bool, std::string> __check_must_be_in(const NetPacketCommandLine &cmd, const std::string &name, bool has) {
         std::string err_msg = "'" + name + "' must be set";
         bool has_mode = false;
 
@@ -80,46 +78,44 @@ E.g.: <array[float[0..1]]> - 0,0.2,0.4,0.8,0.9,1\r\n\
         return std::make_pair<bool, std::string>(!has_mode || has_mode && has, std::move(err_msg));
     };
 
-    auto __check_mode(const CommandLine &cmd, const std::string &name, bool has) {
-        static const auto &err_msg = "Either one option must be selected: -" + CommandLine::Flags::MODE_SEND_DATA +
-                                     ", -" + CommandLine::Flags::MODE_GENERATE_DATA +
-                                     " or -" + CommandLine::Flags::MODE_CHECK_DECODE;
+     auto __check_mode(const NetPacketCommandLine &cmd, const std::string &name, bool has) {
+        static const auto &err_msg = "Either one option must be selected: -" + NetPacketCommandLine::Flags::MODE_SEND_DATA +
+                                     ", -" + NetPacketCommandLine::Flags::MODE_GENERATE_DATA +
+                                     " or -" + NetPacketCommandLine::Flags::MODE_CHECK_DECODE;
         return std::make_pair<bool, std::string>(
-                cmd.isOptSet(CommandLine::Flags::MODE_SEND_DATA) +
-                cmd.isOptSet(CommandLine::Flags::MODE_CHECK_DECODE) +
-                cmd.isOptSet(CommandLine::Flags::MODE_GENERATE_DATA) == 1,
+                cmd.isOptSet(NetPacketCommandLine::Flags::MODE_SEND_DATA) +
+                cmd.isOptSet(NetPacketCommandLine::Flags::MODE_CHECK_DECODE) +
+                cmd.isOptSet(NetPacketCommandLine::Flags::MODE_GENERATE_DATA) == 1,
                 std::string(err_msg));
     };
 
-    auto __check_noise_dif(const CommandLine &cmd, const std::string &name, bool has) {
+
+    auto __check_noise_dif(const NetPacketCommandLine &cmd, const std::string &name, bool has) {
         static const auto &err_msg = "Either one option must be selected: -" +
-                                     /*CommandLine::Values::PARAM_DIFFICULTIES + " or -" + */CommandLine::Values::PARAM_NOISE_LEVELS;
+                                     NetPacketCommandLine::Values::PARAM_NOISE_LEVELS;
         auto check_result = 0;
-        auto mode_ok = __check_must_be_in<CommandLine::Flags::MODE_GENERATE_DATA>(cmd, name, has);
+        auto mode_ok = __check_must_be_in<NetPacketCommandLine::Flags::MODE_GENERATE_DATA>(cmd, name, has);
         if (!mode_ok.first)
             return mode_ok;
 
-        return std::make_pair<bool, std::string>(
-                /*!cmd.isOptSet(CommandLine::Values::PARAM_DIFFICULTIES)*/ true,
-                                                                           std::string(err_msg));
+        return std::make_pair<bool, std::string>(true, std::string(err_msg));
     };
-
     template<int min, int max>
     std::pair<bool, std::string>
-    __value_check_int_range(const CommandLine &cmd, const std::string &name, const std::string &val) {
+    __value_check_int_range(const NetPacketCommandLine &cmd, const std::string &name, const std::string &val) {
         auto parsed = CommandProcessor::Parse<int>(val);
         return std::make_pair<bool, std::string>(parsed >= min && parsed <= max,
                                                  "Value of '-" + name + "' must lie in intervals [" +
                                                  std::to_string(min) + ", " + std::to_string(max) + "]");
     }
 
-    const std::map<std::string, CommandLine::ValidatorEntry> CommandLine::VALIDATORS = {
-            {Flags::MODE_CHECK_DECODE,     {__check_mode, nullptr}},
-
+    const std::map<std::string, NetPacketCommandLine::ValidatorEntry> NetPacketCommandLine::VALIDATORS = {
+ /*           {Flags::MODE_CHECK_DECODE,     {__check_mode, nullptr}},
+			/*
             {Flags::MODE_SEND_DATA,        {__check_mode, nullptr}},
             {Flags::MODE_GENERATE_DATA,    {__check_mode, nullptr}},
             {Values::PARAM_NOISE_LEVELS,   {__check_noise_dif,
-                                            [](const CommandLine &cmd, const std::string &name, const std::string &val)
+                                            [](const NetPacketCommandLine &cmd, const std::string &name, const std::string &val)
                                                {
                                                    auto parsed = Parse<std::vector<float>>(val);
                                                    bool success = true;
@@ -139,7 +135,8 @@ E.g.: <array[float[0..1]]> - 0,0.2,0.4,0.8,0.9,1\r\n\
             {Values::INOUT_SOURCE_DATA,    {__check_must_be_in<Flags::MODE_GENERATE_DATA, Flags::MODE_SEND_DATA, Flags::MODE_CHECK_DECODE>, nullptr}},
             {Values::OUTPUT_REPORT,        {__check_must_be_in<Flags::MODE_CHECK_DECODE>, nullptr}},
             {Values::PARAM_SOURCE_MAXSIZE, {__check_must_be_in<Flags::MODE_GENERATE_DATA>, __value_check_int_range<1, 4'000'000>}},
-            {Values::PARAM_NUM_SOURCES,    {__check_must_be_in<Flags::MODE_GENERATE_DATA>, __value_check_int_range<1, INT_MAX>}},/**/
+            {Values::PARAM_NUM_SOURCES,    {__check_must_be_in<Flags::MODE_GENERATE_DATA>, __value_check_int_range<1, INT_MAX>}},
+*/
     };
 // END OF VALIDATORS
 
