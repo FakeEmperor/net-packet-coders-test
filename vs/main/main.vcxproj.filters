@@ -1,0 +1,1023 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd;ipp</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\npct">
+      <UniqueIdentifier>{1d067add-acd0-4cf8-a4b3-1a5dfb6e3a84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\npct">
+      <UniqueIdentifier>{66201564-3e17-4cbc-8de6-4f9c79d40293}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\npct\cmd">
+      <UniqueIdentifier>{c944e916-64fe-496f-9e39-fd6f84634486}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\npct\common">
+      <UniqueIdentifier>{59154481-c387-49ad-9c54-7e00731b998f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\npct\data">
+      <UniqueIdentifier>{88027e4d-c014-4b31-8fc2-295973acd0e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\npct\net">
+      <UniqueIdentifier>{36e9a8c4-9467-4db9-ba47-d1a2d2eca572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\npct\utils">
+      <UniqueIdentifier>{7118df68-28d0-4124-b4d5-04b7591782f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\npct\net\utils">
+      <UniqueIdentifier>{2a83e5c5-ba46-4819-a355-f4526ec0fa5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\npct\data\impl">
+      <UniqueIdentifier>{7a04df9c-fc35-4cb7-9e68-463a4828dff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\npct\net\impl">
+      <UniqueIdentifier>{23eb2ea1-1a50-41c5-87bf-0b382085ef9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\npct\cmd\impl">
+      <UniqueIdentifier>{e630ecf2-8663-4717-91c4-b68b6fdaa1d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\npct\cmd">
+      <UniqueIdentifier>{3ef77da1-31f5-45a9-ac4b-0b0fa1150655}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\npct\net">
+      <UniqueIdentifier>{a9cb2e80-20f6-4adc-a205-a27ade503516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\npct\net\impl">
+      <UniqueIdentifier>{0937bd97-c5a8-4985-a230-691693afdb49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\npct\cmd\impl">
+      <UniqueIdentifier>{1aa08151-8dc0-4c44-8e9f-0ef2af9cf72e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{1902de87-10d5-4764-9875-8e901ff2da46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\include">
+      <UniqueIdentifier>{0e8f6f52-182e-41a9-9779-cb3455823077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\npct\utils">
+      <UniqueIdentifier>{a6123100-e28f-4edb-ac8d-a165797dac43}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\example_main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\utils\utils.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketCommandLine.cc">
+      <Filter>Source Files\npct\cmd\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\cmd.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\utils\utils.cc" />
+    <ClCompile Include="..\..\npct\cmd\cmd.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\utils\utils.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketCommandLine.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketCommandLine.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketCommandLine.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\utils\utils.cc" />
+    <ClCompile Include="..\..\npct\utils\utils.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\include\fmt\ostream.cc" />
+    <ClCompile Include="..\..\include\fmt\posix.cc" />
+    <ClCompile Include="..\..\include\fmt\ostream.cc" />
+    <ClCompile Include="..\..\include\fmt\posix.cc" />
+    <ClCompile Include="..\..\include\fmt\ostream.cc" />
+    <ClCompile Include="..\..\include\fmt\posix.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\cmd.cc">
+      <Filter>Source Files\npct\cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\utils\utils.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketCommandLine.cc">
+      <Filter>Source Files\npct\cmd\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketCommandLine.cc">
+      <Filter>Source Files\npct\cmd\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketCommandLine.cc">
+      <Filter>Source Files\npct\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\cmd\impl\NetPacketMode.cc" />
+    <ClCompile Include="..\..\npct\net\impl\JsonNetReceiver.cc" />
+    <ClCompile Include="..\..\include\fmt\format.cc">
+      <Filter>Source Files\include</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\fmt\ostream.cc" />
+    <ClCompile Include="..\..\include\fmt\posix.cc" />
+    <ClCompile Include="..\..\include\fmt\format.cc">
+      <Filter>Source Files\include</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\fmt\ostream.cc" />
+    <ClCompile Include="..\..\include\fmt\posix.cc" />
+    <ClCompile Include="..\..\include\fmt\format.cc">
+      <Filter>Source Files\include</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\fmt\ostream.cc" />
+    <ClCompile Include="..\..\include\fmt\posix.cc" />
+    <ClCompile Include="..\..\npct\utils\utils.cc" />
+    <ClCompile Include="..\..\npct\cmd\cmd.cc">
+      <Filter>Source Files\npct\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\npct\utils\utils.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\net\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\data\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\cmd\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\cmd\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\net\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\cmd\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\data\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\net\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\cmd.h">
+      <Filter>Header Files\npct\net\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\common\handlers.h" />
+    <ClInclude Include="..\..\npct\data\IJsonPacketSupported.h" />
+    <ClInclude Include="..\..\npct\data\IRawPacketSupported.h" />
+    <ClInclude Include="..\..\npct\net\IDataReceiver.h" />
+    <ClInclude Include="..\..\npct\net\IPacketReceiver.h" />
+    <ClInclude Include="..\..\npct\utils\static_if.h" />
+    <ClInclude Include="..\..\npct\utils\string_literal.h" />
+    <ClInclude Include="..\..\npct\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\net\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\cmd\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\cmd\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\net\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketCommandLine.h">
+      <Filter>Header Files\npct\data\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\npct\cmd\impl\NetPacketMode.h" />
+    <ClInclude Include="..\..\npct\data\impl\NTestPacket.h" />
+    <ClInclude Include="..\..\npct\net\impl\JsonNetReceiver.h" />
+    <ClInclude Include="..\..\npct\net\utils\portable_endian.h" />
+    <ClInclude Include="..\..\npct\net\utils\utils.h" />
+  </ItemGroup>
+</Project>

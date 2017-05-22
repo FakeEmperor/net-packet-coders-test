@@ -6,7 +6,7 @@
 #define NPC_IMPL_NETPACKET_MODE_H
 
 #include <fmt/ostream.h>
-#include <enum_str.h>
+// #include <enum_str.h>
 namespace npct::cmd::impl {
     // ENUM(NetPacketMode, size_t, SEND, RECEIVE, UNKNOWN)
     enum class NetPacketMode

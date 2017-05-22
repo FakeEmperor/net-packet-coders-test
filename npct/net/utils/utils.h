@@ -3,23 +3,43 @@
 
 namespace npct::net::utils
 {
-    template <typename T>
-    constexpr T hton(T value) noexcept
-    {
+#if __cplusplus >= 201402L
+	template <typename T>
+	constexpr T hreverse(T value) noexcept
+	{
 #if __BYTE_ORDER == __LITTLE_ENDIAN
-        char* ptr = reinterpret_cast<char*>(&value);
-        std::reverse(ptr, ptr + sizeof(T));
+		auto* ptr = reinterpret_cast<char*>(&value);
+		std::reverse(ptr, ptr + sizeof(T));
 #endif
-        return value;
-    }
+		return value;
+	}
+#else
+	template <typename T>
+	constexpr T hreverse(T value, char* ptr = 0) noexcept
+	{
+		return
+#if __BYTE_ORDER == __LITTLE_ENDIAN
+			ptr = reinterpret_cast<char*>(&value),
+			std::reverse(ptr, ptr + sizeof(T)),
+#endif
+			value;
+	}
+#endif
+
+	template <typename T>
+	constexpr T hton(T value) noexcept
+	{
+		return hreverse(value);
+	}
+
+    
 
     template <typename T>
     constexpr T ntoh(T value) noexcept
     {
-#if __BYTE_ORDER == __LITTLE_ENDIAN
-        char* ptr = reinterpret_cast<char*>(&value);
-        std::reverse(ptr, ptr + sizeof(T));
-#endif
-        return value;
+		return hreverse(value);
     }
+
+
+
 }
