@@ -1,6 +1,7 @@
-#include "utils.h"
 #include <random>
 #include <array>
+
+#include "utils.h"
 
 namespace npct::utils {
     std::vector<std::string> split(const std::string &s, const std::string &delimeter) {

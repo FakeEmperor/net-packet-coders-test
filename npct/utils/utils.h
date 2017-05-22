@@ -15,6 +15,12 @@
 #define NEWLINE "\n" // Mac OS X uses \n
 #endif
 
+
+#define _STR(x) #x
+#define STR(x) _STR(x)
+
+
+
 namespace npct::utils {
     std::vector<std::string> split(const std::string& s, const std::string &delimeter);
 
