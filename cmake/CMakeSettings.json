@@ -1,0 +1,25 @@
+{
+  // See https://go.microsoft.com//fwlink//?linkid=834763 for more information about this file.
+
+  "configurations": [
+    {
+
+      "buildCommandArgs": "-m -v:m",
+      "buildRoot": "${workspaceRoot}\\vs\\17\\CMakeBuild\\build\\${name}",
+      "cmakeCommandArgs": "-DCMAKE_CXX_FLAGS=\"/std:c++latest -D_SCL_SECURE_NO_WARNINGS /DWIN32 /D_WINDOWS /W3 /GR /EHsc \"",
+      "configurationType": "Debug",
+      "ctestCommandArgs": "",
+      "generator": "Visual Studio 15 2017",
+      "name": "x86-Debug"
+    },
+    {
+      "buildCommandArgs": "-m -v:m",
+      "buildRoot": "${workspaceRoot}\\vs\\17\\CMakeBuild\\build\\${name}",
+      // "cmakeCommandArgs": "-DCMAKE_CXX_FLAGS=\"/std:c++latest -D_SCL_SECURE_NO_WARNINGS\"",
+      "configurationType": "Debug",
+      "ctestCommandArgs": "",
+      "generator": "Visual Studio 15 2017 Win64",
+      "name": "x64-Debug"
+    }
+  ]
+}
