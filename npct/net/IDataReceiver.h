@@ -1,31 +1,34 @@
 #ifndef NPCT_DATA_IRECEIVER_H
 #define NPCT_DATA_IRECEIVER_H
 
-#include <common/handlers.h>
+#include <common/callbacks.h>
+#include "IPeerSession.h"
 
 namespace npct::net
 {
 
-    template <typename Impl_, class PeerSessionClass_>
-    class IReceiver
+    template <typename Impl_, class PeerSessionClass_, class BufferClass_>
+    class IDataReceiver
     {
     public:
-        typedef PeerSessionClass_ PeerSessionClass;
-        typedef typename PeerSessionClass_::BufferType BufferType;
+        using PeerSessionClass = PeerSessionClass_;
+        using BufferClass = typename PeerSessionClass::BufferClass;
         typedef Impl_ Impl;
+        static_assert(std::is_base_of<IPeerSession<PeerSessionClass_, typename PeerSessionClass::SessionSettingsClass, BufferClass >, PeerSessionClass>::value,
+                      "PeerSessionClass_ must be a subclass of IPeerSession with MessageType_ = PeerSessionClass_::BufferType");
         
 
-        typedef IReceiver<Impl_, PeerSessionClass_> Base;
+        typedef IDataReceiver<Impl_, PeerSessionClass_, BufferClass_> Base;
 
 
-        typedef common::HandlerFn<const Impl_ *, PeerSessionClass_ *, const typename PeerSessionClass_::BufferType &> OnPartialReceiveFn;
-        typedef common::HandlerFn<const Impl_ *, PeerSessionClass_ *> OnPeerConnectFn;
+        typedef common::HandlerFn<const Impl_ *, PeerSessionClass *, const BufferClass &> OnPartialReceiveFn;
+        typedef common::HandlerFn<const Impl_ *, PeerSessionClass *> OnPeerConnectFn;
 
-        virtual ~IReceiver() = default;
+        virtual ~IDataReceiver() = default;
 
         virtual void start() = 0;
 
-        virtual void closeSession(const PeerSessionClass_ *) = 0;
+        virtual void closeSession(const PeerSessionClass *) = 0;
 
         virtual void onPartialReceive(const OnPartialReceiveFn &) = 0 ;
         virtual void onPeerConnect(const OnPeerConnectFn &) = 0;

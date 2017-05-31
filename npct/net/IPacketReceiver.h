@@ -2,20 +2,23 @@
 #define NPCT_DATA_IPACKETRECEIVER_H
 
 #include "IDataReceiver.h"
-
+#include "IPeerSession.h"
 
 namespace npct::net
 {
     
-    template <class Impl_, class PeerSessionClass_>
-    class IPacketReceiver : public IReceiver<Impl_, PeerSessionClass_>
+    template <template <typename> class Impl_, class PacketClass_, class PeerSessionClass_>
+    class IPacketReceiver : public IDataReceiver<Impl_<PacketClass_>, PeerSessionClass_, PacketClass_>
     {
     public:
+        using PacketClass = PacketClass_;
+        using PeerSessionClass = PeerSessionClass_;
+        using Base = IPacketReceiver<Impl_, PacketClass_, PeerSessionClass_>;
+        
+        static_assert(std::is_base_of<IPeerSession<PeerSessionClass_, typename PeerSessionClass::SessionSettingsClass, PacketClass>, PeerSessionClass>::value,
+                      "PeerSessionClass_ must be a subclass of IPeerSession with MessageType_ = PeerSessionClass_::PacketType");
 
-        typedef typename PeerSessionClass_::PacketType PacketType;
-        typedef IPacketReceiver<Impl_, PeerSessionClass_> Base;
-
-        typedef npct::common::HandlerFn<const Impl_ *, PeerSessionClass_ *, const PacketType*> OnPacketReceiveFn;
+        typedef npct::common::HandlerFn<const Impl_<PacketClass_> *, PeerSessionClass *, const PacketClass*> OnPacketReceiveFn;
 
         virtual void onPacketReceive(const OnPacketReceiveFn &) = 0;
 

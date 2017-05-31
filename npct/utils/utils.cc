@@ -1,5 +1,6 @@
 #include <random>
 #include <array>
+#include <algorithm>
 
 #include "utils.h"
 

@@ -15,12 +15,20 @@ def send_json(host, port, jsdata):
     s.send(raw)
     
     while(True):
-        s.recv(4)
+        try:
+            msg_part = s.recv(4)
+            print(msg_part.decode('utf-8'), end='', flush=True)
+        except ConnectionResetError as e:
+            print("Connection was reset by peer: {}".format(e), end='', flush=True)
+
+            break
     s.close()
 
 DATA = {
-   "data": "Hello!!" * 1000,
+   "algorithm": "crc32",
    "flags": 0x03,
+   "message_direction": 0x01,
+    "input": "Hello!!"
 }
 
 send_json(HOST, PORT, DATA)

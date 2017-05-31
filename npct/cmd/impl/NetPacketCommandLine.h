@@ -55,7 +55,7 @@ namespace npct::cmd::impl {
 
         ///////////////  VARIABLES ////////////////////
         static const std::string HELP_TEXT;
-        static constexpr char* MODE_OPT_NAME = "mode";
+        static constexpr char*const MODE_OPT_NAME = (char *const) "mode";
         static const std::set<std::string> VALUED_OPTS, FLAG_OPTS;
         static const std::map<std::string, std::pair<PresenceValidator, ValueValidator>> VALIDATORS;
         ////////////// METHODS /////////

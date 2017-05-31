@@ -255,7 +255,7 @@ namespace npct::cmd {
         setMode_() {
 
             // do nothing - user haven't set neither ModeExtractFn nor
-            #pragma message __FILE__ ": ["  " CommandLine uses no mode, are you sure this is intended? @"  STR(__LINE__)
+            #pragma message __FILE__ ": ["  " CommandLine uses no mode, are you sure this is intended?" " ]"
         }
 
 

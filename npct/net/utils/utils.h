@@ -1,5 +1,9 @@
+#ifndef NPCT_NET_UTILS_H
+#define NPCT_NET_UTILS_H
+
 #include "portable_endian.h"    // __BYTE_ORDER
-#include <algorithm>   // std::reverse
+#include <algorithm>
+#include <asio/ip/tcp.hpp>
 
 namespace npct::net::utils
 {
@@ -40,6 +44,8 @@ namespace npct::net::utils
 		return hreverse(value);
     }
 
-
+    void print_error(const asio::error_code& error, const asio::ip::tcp::endpoint &e);
 
 }
+
+#endif // NPCT_NET_UTILS_H

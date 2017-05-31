@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_definitions(-DASIO_STANDALONE)
 add_definitions(-D_WIN32_WINNT=0x0600)
+add_definitions(-DASIO_DISABLE_SMALL_BLOCK_RECYCLING)
+add_definitions(-DNOMINMAX)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
@@ -27,7 +29,7 @@ message("${SOURCES_INCLUDES}")
 list(REMOVE_ITEM SOURCES_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}/../include/asio/impl/src.cpp")
 
 file(GLOB_RECURSE SOURCES_UTILS
-        "../npct/utils/*.cc"
+        "../npct/utils/string.cc"
 )
 
 file(GLOB_RECURSE SOURCES_NPCT
@@ -35,7 +37,7 @@ file(GLOB_RECURSE SOURCES_NPCT
 		"../npct/cmd/*.cc"
 		# DATA subdir
 		"../npct/data/*.cc"
-
+		"../npct/coders/*.cc"
 		"../npct/net/*.cc"
 )
 
@@ -53,8 +55,9 @@ else()
     file(GLOB MAIN_NPCT "../example_main.cc")
 endif(CMAKE_BUILD_TYPE MATCHES Test)
 
-add_executable(npct ${SOURCES_UTILS} ${SOURCES_NPCT} ${SOURCES_INCLUDES}
-        ${MAIN_NPCT})
+
+add_library(npct_lib OBJECT ${SOURCES_NPCT} ${SOURCES_INCLUDES} ${SOURCES_UTILS} )
+add_executable(npct ${MAIN_NPCT} $<TARGET_OBJECTS:npct_lib>)
 
 
 IF (WIN32)
