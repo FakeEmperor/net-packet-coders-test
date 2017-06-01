@@ -14,6 +14,9 @@ namespace npct::coders
 {
 
 
+    // Страшная магия, надо отрефакторить.
+    // Суть токова - эта штука мапится почти один-в-один на джсон!
+    
     struct CoderMessage : public data::IJsonSerializable<CoderMessage>, public data::IRawSerializable<CoderMessage>
     {
     public:
@@ -60,7 +63,7 @@ namespace npct::coders
             return Impl(*this);
         }
 
-        nlohmann::json to_json() const override {
+        virtual nlohmann::json to_json() const override {
             // BUG: Probably can lead to bugs. Maybe fix this? Like constructing real json
             return underlying;
         }
