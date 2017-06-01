@@ -1,6 +1,4 @@
 
-
-#include <thread>
 #include <iostream>
 #include <vector>
 #include <asio.hpp>
@@ -17,6 +15,7 @@
 #include <coders/impl/NetCodersRunner.h>
 // ALGORITHMS
 #include <coders/impl/algo/CRC32Coder.h>
+#include <thread>
 
 using namespace npct::net::impl;
 using namespace npct::coders::impl;
