@@ -25,6 +25,15 @@
 # CMake
 **/cmake-build-debug/
 
+# Ignore built libs
+/lib/
+
+
+# Ignore vs files
+*.tlog
+/vs/**/[Dd]ebug/
+/vs/**/[Rr]elease/
+
 # Mongo Explorer plugin:
 **/.idea/**/mongoSettings.xml
 
@@ -48,16 +57,16 @@
 *.userprefs
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
+vs/[Dd]ebug/
+vs/[Dd]ebugPublic/
+vs/[Rr]elease/
+vs/[Rr]eleases/
+vs/x64/
+vs/x86/
+vs/bld/
+vs/[Bb]in/
+vs/[Oo]bj/
+vs/[Ll]og/
 
 # Visual Studio 2015 cache/options directory
 .vs/

@@ -12,7 +12,7 @@ add_definitions(-DNOMINMAX)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 
-
+link_directories(../lib)
 
 
 include_directories(../npct)
@@ -24,9 +24,15 @@ file(GLOB_RECURSE SOURCES_INCLUDES
      "../include/*.c"
 )
 
+list(REMOVE_ITEM SOURCES_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}/../include/asio/impl/src.cpp")
+FOREACH(item ${SOURCES_INCLUDES})
+  IF(${item} MATCHES "^${CMAKE_CURRENT_SOURCE_DIR}/../include/log4cpp/")
+    LIST(REMOVE_ITEM SOURCES_INCLUDES ${item})
+  ENDIF(${item} MATCHES "^${CMAKE_CURRENT_SOURCE_DIR}/../include/log4cpp/")
+ENDFOREACH(item)
+
 message("${SOURCES_INCLUDES}")
 
-list(REMOVE_ITEM SOURCES_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}/../include/asio/impl/src.cpp")
 
 file(GLOB_RECURSE SOURCES_UTILS
         "../npct/utils/string.cc"
@@ -39,6 +45,7 @@ file(GLOB_RECURSE SOURCES_NPCT
 		"../npct/data/*.cc"
 		"../npct/coders/*.cc"
 		"../npct/net/*.cc"
+		"../npct/log/*.cc"
 )
 
 file(GLOB SOURCES_TEST
@@ -59,7 +66,7 @@ endif(CMAKE_BUILD_TYPE MATCHES Test)
 add_library(npct_lib OBJECT ${SOURCES_NPCT} ${SOURCES_INCLUDES} ${SOURCES_UTILS} )
 add_executable(npct ${MAIN_NPCT} $<TARGET_OBJECTS:npct_lib>)
 
-
+target_link_libraries(npct log4cpp)
 IF (WIN32)
     target_link_libraries(npct wsock32 ws2_32)
 ENDIF()
