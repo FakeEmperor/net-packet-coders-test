@@ -12,6 +12,12 @@ namespace npct::coders::impl::algo::hamming
 
     public:
         ~HammingCoder() override = default;
+        HammingCoder() = default;
+        HammingCoder(const HammingCoder &) = default;
+        HammingCoder(HammingCoder &&) noexcept = default;
+
+        HammingCoder& operator = (const HammingCoder &) = default;
+        HammingCoder& operator = (HammingCoder &&) noexcept = default;
 
         const char* name() const override;
         
