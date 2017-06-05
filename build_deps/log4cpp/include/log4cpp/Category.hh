@@ -119,7 +119,7 @@ namespace log4cpp {
          * Priority::NOTSET on the Root Category.
          **/
         virtual void setPriority(Priority::Value priority) 
-        throw(std::invalid_argument);
+        noexcept(false);// throw(std::invalid_argument);
 
         /**
          * Returns the assigned Priority, if any, for this Category.
@@ -152,8 +152,8 @@ namespace log4cpp {
          * @param appender The Appender to wich this category has to log.
          * @exception std::invalid_argument if the appender is NULL.
          **/
-        virtual void addAppender(Appender* appender) 
-        throw(std::invalid_argument);
+        virtual void addAppender(Appender* appender)
+        noexcept(false);// throw(std::invalid_argument);
 
         /**
          * Adds an Appender for this Category.

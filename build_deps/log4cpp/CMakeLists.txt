@@ -11,8 +11,8 @@
 
 PROJECT ( LOG4CPP )
 
-INCLUDE_DIRECTORIES ( include )
-INCLUDE_DIRECTORIES ( . )
+INCLUDE_DIRECTORIES ( ${CMAKE_CURRENT_LIST_DIR}/include )
+INCLUDE_DIRECTORIES ( ${CMAKE_CURRENT_LIST_DIR}/. )
 
 IF (WIN32)
   ADD_DEFINITIONS ( -D_CRT_SECURE_NO_WARNINGS )
@@ -31,53 +31,53 @@ ELSE ( CMAKE_BUILD_TYPE MATCHES "Debug" )
 ENDIF ( CMAKE_BUILD_TYPE MATCHES "Debug" )
 
 ADD_LIBRARY ( ${LOG4CPP_LIBRARY_NAME}
-  src/Appender.cpp
-  src/AppenderSkeleton.cpp
-  src/AppendersFactory.cpp
-  src/BufferingAppender.cpp
-  src/FactoryParams.cpp
-  src/LayoutsFactory.cpp
-  src/LevelEvaluator.cpp
-  src/Localtime.cpp
-  src/PassThroughLayout.cpp
-  src/TriggeringEventEvaluatorFactory.cpp
-  src/LayoutAppender.cpp
-  src/FileAppender.cpp
-  src/DailyRollingFileAppender.cpp
-  src/RollingFileAppender.cpp
-  src/FixedContextCategory.cpp
-  src/IdsaAppender.cpp
-  src/OstreamAppender.cpp
-  src/StringQueueAppender.cpp
-  src/SyslogAppender.cpp
-  src/RemoteSyslogAppender.cpp
-  src/SimpleLayout.cpp
-  src/BasicLayout.cpp
-  src/PatternLayout.cpp
-  src/Category.cpp
-  src/CategoryStream.cpp
-  src/HierarchyMaintainer.cpp
-  src/Configurator.cpp
-  src/BasicConfigurator.cpp
-  src/SimpleConfigurator.cpp
-  src/PropertyConfigurator.cpp
-  src/PropertyConfiguratorImpl.cpp
-  src/LoggingEvent.cpp
-  src/Priority.cpp
-  src/NDC.cpp
-  src/Filter.cpp
-  src/TimeStamp.cpp
-  src/StringUtil.cpp
-  src/Properties.cpp
-  src/Win32DebugAppender.cpp
-  src/NTEventLogAppender.cpp
-  src/DllMain.cpp
-  src/DummyThreads.cpp
-  src/MSThreads.cpp
-  src/OmniThreads.cpp
-  src/PThreads.cpp
-  src/PortabilityImpl.cpp
-  src/AbortAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/Appender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/AppenderSkeleton.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/AppendersFactory.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/BufferingAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/FactoryParams.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/LayoutsFactory.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/LevelEvaluator.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/Localtime.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/PassThroughLayout.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/TriggeringEventEvaluatorFactory.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/LayoutAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/FileAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/DailyRollingFileAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/RollingFileAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/FixedContextCategory.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/IdsaAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/OstreamAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/StringQueueAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/SyslogAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/RemoteSyslogAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/SimpleLayout.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/BasicLayout.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/PatternLayout.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/Category.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/CategoryStream.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/HierarchyMaintainer.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/Configurator.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/BasicConfigurator.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/SimpleConfigurator.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/PropertyConfigurator.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/PropertyConfiguratorImpl.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/LoggingEvent.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/Priority.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/NDC.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/Filter.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/TimeStamp.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/StringUtil.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/Properties.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/Win32DebugAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/NTEventLogAppender.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/DllMain.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/DummyThreads.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/MSThreads.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/OmniThreads.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/PThreads.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/PortabilityImpl.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/AbortAppender.cpp
 )
 
 IF (WIN32)

@@ -82,7 +82,7 @@ namespace log4cpp {
          * @exception ConfigureFailure if the pattern is invalid
          **/
         virtual void setConversionPattern(const std::string& conversionPattern)
-            throw(ConfigureFailure);
+            noexcept(false);// throw(ConfigureFailure);
 
         virtual std::string getConversionPattern() const;
 

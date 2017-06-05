@@ -25,7 +25,7 @@
 #ifndef LOG4CPP_HAVE_INT64_T
 #define LOG4CPP_HAVE_INT64_T
 #define int64_t __int64
-
+#endif
 /* define if the compiler has in_addr_t */
 #ifndef LOG4CPP_HAVE_IN_ADDR_T
 #define LOG4CPP_HAVE_IN_ADDR_T
@@ -42,7 +42,7 @@ typedef u_long in_addr_t;
 
 #endif
 
-#endif
+
 
 /* Define if you have the <io.h> header file.  */
 #ifndef LOG4CPP_HAVE_IO_H
