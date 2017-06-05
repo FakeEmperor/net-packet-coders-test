@@ -84,13 +84,13 @@ namespace npct::net::impl
 
         struct PacketBufferType
         {
-            static constexpr size_t SIZE_HEADER_SIZE = sizeof(size_t);
+            static constexpr uint32_t SIZE_HEADER_SIZE = sizeof(uint32_t);
             enum class State { AWAIT_MORE_SIZE_HEADER_DATA, AWAIT_MORE_DATA } state = { State::AWAIT_MORE_SIZE_HEADER_DATA };
-            size_t bytes_left = { SIZE_HEADER_SIZE };
-            size_t total_bytes = {};
+            uint32_t bytes_left = { SIZE_HEADER_SIZE };
+            uint32_t total_bytes = {};
             BufferClass data;
 
-            size_t feed(const typename BufferClass::const_iterator &source_it, size_t max_feed_size);
+            uint32_t feed(const typename BufferClass::const_iterator &source_it, uint32_t max_feed_size);
             std::unique_ptr<PacketClass_> commit() noexcept(false);
         } packet_buffer_;
 

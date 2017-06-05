@@ -157,9 +157,9 @@ namespace npct::net::impl
     ///////////////  SESSION::BUFFER
 
     template <class PacketClass_>
-    size_t JsonNetSession<PacketClass_>::PacketBufferType::feed(const typename BufferClass::const_iterator &source_it, size_t max_feed_size)
+    uint32_t JsonNetSession<PacketClass_>::PacketBufferType::feed(const typename BufferClass::const_iterator &source_it, uint32_t max_feed_size)
     {
-        size_t pushed_to_buffer = std::min(bytes_left, max_feed_size);
+        uint32_t pushed_to_buffer = std::min(bytes_left, max_feed_size);
         bytes_left -= pushed_to_buffer;
         data.insert(data.end(), source_it, source_it + pushed_to_buffer);
         return pushed_to_buffer;
