@@ -3,6 +3,7 @@
 
 #include <string>
 #include <type_traits>
+#include <common/errors/errors.h>
 
 namespace npct::log
 {
@@ -39,6 +40,12 @@ namespace npct::log
         virtual void log(LogLevel log_level, const CharClass *msg,  ...) = 0;
 
         virtual LoggerCapabilites capabilites() const = 0;
+
+        static std::unique_ptr<ILogger<StringClass>> GetRoot(LogLevel log_level) noexcept(false) {
+            throw npct::common::errors::NotImplementedError(
+                    "ILogger::GetRoot()",
+                    "Cannot call GetRoot on a base class");
+        }
 
     };
 

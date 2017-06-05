@@ -1,3 +1,4 @@
+#ifdef NPCT_LOG_ENABLE_LOG4CPP
 #ifndef NPCT_LOG_IMPL_LOG4JLOGGER_H
 #define NPCT_LOG_IMPL_LOG4JLOGGER_H
 
@@ -33,7 +34,7 @@ namespace npct::log::impl
         LogLevel getLevel() const;
         
         LoggerCapabilites capabilites() const override;
-        static std::unique_ptr<Log4JLogger> GetRoot(LogLevel log_level);
+        static std::unique_ptr<ILogger<>> GetRoot(LogLevel log_level);
     private:
         static log4cpp::Priority::PriorityLevel fromLogLevel(LogLevel log_level);
         std::shared_ptr<log4cpp::Appender> appender_;
@@ -49,3 +50,4 @@ namespace npct::log::impl
 
 
 #endif // !NPCT_LOG_IMPL_LOG4JLOGGER_H
+#endif // NPCT_LOG_ENABLE_LOG4CPP

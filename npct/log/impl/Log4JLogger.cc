@@ -1,3 +1,4 @@
+#ifdef NPCT_LOG_ENABLE_LOG4CPP
 #include <iostream>
 #include <log4cpp/Category.hh>
 #include <log4cpp/Appender.hh>
@@ -68,9 +69,11 @@ namespace npct::log::impl
         return { LoggerCapabilites::FlowControl::SYNC, LoggerCapabilites::ThreadSupport::NONE, LoggerCapabilites::CacheControl::NONE };
     }
 
-    std::unique_ptr<Log4JLogger> Log4JLogger::GetRoot(LogLevel log_level)
+    std::unique_ptr<ILogger<>> Log4JLogger::GetRoot(LogLevel log_level)
     {
-        return std::move(std::unique_ptr<Log4JLogger>(new Log4JLogger(log4cpp::Category::getRoot(), log_level)));
+        return std::move(std::unique_ptr<ILogger<>>(
+                new Log4JLogger(log4cpp::Category::getRoot(), log_level))
+        );
     }
 
     log4cpp::Priority::PriorityLevel Log4JLogger::fromLogLevel(LogLevel log_level)
@@ -85,3 +88,4 @@ namespace npct::log::impl
         throw common::errors::ValueError("log_level");
     }
 }
+#endif
