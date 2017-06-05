@@ -116,20 +116,29 @@
   <ItemGroup>
     <ClCompile Include="..\..\example_main.cc" />
     <ClCompile Include="..\..\npct\*\*.cc" />
-    <ClCompile Include="..\..\npct\*\*\*.cc" />
+    <ClCompile Include="..\..\npct\*\*\*.cc">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="..\..\npct\*\*\*\*.cc" />
+    <ClCompile Include="..\..\npct\*\*\*\*\*.cc" />
 	
     <ClCompile Include="..\..\include\*\*.cc" />
     <ClCompile Include="..\..\include\*\*\*.cc" />
     <ClCompile Include="..\..\include\*\*\*\*.cc" />
+    <ClCompile Include="..\..\include\*\*\*\*\*.cc" />
+    <ClCompile Include="..\..\include\*\*\*\*\*\*.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\npct\*\*.h" />
     <ClInclude Include="..\..\npct\*\*\*.h" />
     <ClInclude Include="..\..\npct\*\*\*\*.h" />
-    <ClInclude Include="..\..\npct\*\*.tpp" />
-    <ClInclude Include="..\..\npct\*\*\*.tpp" />
-    <ClInclude Include="..\..\npct\*\*\*\*.tpp" />
+    <ClInclude Include="..\..\npct\*\*\*\*\*.h" />
+    <ClInclude Include="..\..\npct\*\*\*\*\*\*.h" />
+    <ClInclude Include="..\..\npct\*\*.tcc" />
+    <ClInclude Include="..\..\npct\*\*\*.tcc" />
+    <ClInclude Include="..\..\npct\*\*\*\*.tcc" />
+    <ClInclude Include="..\..\npct\*\*\*\*\*.tcc" />
+    <ClInclude Include="..\..\npct\*\*\*\*\*\*.tcc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
