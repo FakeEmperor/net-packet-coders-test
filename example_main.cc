@@ -14,7 +14,14 @@
 #include <net/impl/JsonNetSession.h>
 #include <coders/impl/NetCodersRunner.h>
 
+// LOG SOLUTION
+#ifdef NPCT_LOG_ENABLE_LOG4CPP
 #include <log/impl/Log4JLogger.h>
+using LoggerImpl = npct::log::impl::Log4JLogger;
+#else
+#include <log/impl/GenericLogger.h>
+using LoggerImpl = npct::log::impl::GenericLogger;
+#endif
 
 
 
@@ -32,7 +39,7 @@ using namespace npct::coders::impl::algo;
 void setupCodersRunner (NetCodersRunner *ncr) {
 /////////// YOUR CODERS REGISTRATION GOES HERE /////////////////
     ncr->registerCoder(std::make_unique<crc32::CRC32Coder>());
-    ncr->registerCoder(std::make_unique<hamming::HammingCoder>());
+    ncr->registerCoder(std::make_unique<hamming::HammingCoder<7,4>>());
 
     /* TODO:
     // ncr->registerCoder(std::make_unique<lzw::LZWCoder>());
@@ -46,7 +53,7 @@ void setupCodersRunner (NetCodersRunner *ncr) {
 int main(int argc, char** argv)
 {
     std::unique_ptr<npct::log::ILogger<>>
-    logger = npct::log::impl::Log4JLogger::GetRoot(npct::log::LogLevel::LL_DEBUG);
+    logger = LoggerImpl::GetRoot(npct::log::LogLevel::LL_DEBUG);
 
     asio::io_service io_loop;
     try
@@ -59,7 +66,7 @@ int main(int argc, char** argv)
         std::thread thr(std::bind<decltype(std::declval<asio::io_service>().run()) (asio::io_service::*)()>(&asio::io_service::run, &io_loop));
         thr.join();
     } catch (std::runtime_error &e) {
-        std::cerr << "[ERROR]! " << e.what();
+        logger->log(npct::log::LogLevel::LL_ERROR, "[CRITICAL]!! %s", e.what());
     }
 
     return 0;
