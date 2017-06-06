@@ -1,7 +1,8 @@
 # #####################
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 3.8)
 project(clion)
 
+set(CMAKE_CONFIGURATION_TYPES "Debug;Test;Release" CACHE STRING "" FORCE)
 set(CMAKE_CXX_STANDARD 17)
 
 # add options to configure project
@@ -16,7 +17,9 @@ ENDIF(LOG_ENABLE_LOGFCPP)
 
 # add necessary options
 add_definitions(-DASIO_STANDALONE)
-add_definitions(-D_WIN32_WINNT=0x0600)
+IF(WIN32)
+    add_definitions(-D_WIN32_WINNT=0x0600)
+ENDIF(WIN32)
 add_definitions(-DASIO_DISABLE_SMALL_BLOCK_RECYCLING)
 add_definitions(-DNOMINMAX)
 
@@ -43,12 +46,12 @@ ENDFOREACH(item)
 # print all files which will be compiled from external libraries
 message("${SOURCES_INCLUDES}")
 
-# [utils] add core files to compile
+# [utils] add utils files to compile
 file(GLOB_RECURSE SOURCES_UTILS
-        "../npct/utils/string.cc"
+        "../npct/utils/*.cc"
 )
 
-# [utils] add core files to compile
+# [core] add core files to compile
 file(GLOB_RECURSE SOURCES_NPCT
 		# CMD subdir
 		"../npct/cmd/*.cc"
@@ -59,7 +62,7 @@ file(GLOB_RECURSE SOURCES_NPCT
 		"../npct/log/*.cc"
 )
 
-# [utils] add core files to compile
+# [test] add test files to compile
 file(GLOB SOURCES_TEST
         "../tests/catch.hpp"
 )
@@ -71,6 +74,10 @@ else()
     file(GLOB MAIN_NPCT "../example_main.cc")
 endif(CMAKE_BUILD_TYPE MATCHES Test)
 
+
+
+
+
 # EXPERIMENTAL: add all include files to project dependencies
 file(GLOB_RECURSE HEADERS_NPCT
         "../npct/*.h"
@@ -81,6 +88,16 @@ file(GLOB_RECURSE HEADERS_NPCT
 # compile all into one object-file and compile executable
 add_library(npct_lib OBJECT ${SOURCES_NPCT} ${SOURCES_INCLUDES} ${SOURCES_UTILS} ${HEADERS_NPCT} )
 add_executable(npct ${MAIN_NPCT} $<TARGET_OBJECTS:npct_lib>)
+
+# if release version - link all libs statically
+message(STATUS "Copying release dir...")
+if(CMAKE_BUILD_TYPE MATCHES Release)
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static" )
+    message(STATUS "Copying release dir...")
+    add_custom_command(TARGET npct POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+            "${CMAKE_SOURCE_DIR}/../configs" $<TARGET_FILE_DIR:npct>/configs)
+endif(CMAKE_BUILD_TYPE MATCHES Release)
 
 # also - link necessary libaries
 IF(LOG_ENABLE_LOGFCPP)
