@@ -24,6 +24,25 @@ namespace npct::utils {
     std::vector<std::string> split(const std::string& s, const std::string &delimeter);
 
 
+    template<typename I>
+    constexpr uint8_t msb_bit_order(I i, uint8_t order = 0) noexcept {
+        static_assert(std::is_integral<I>::value, "typename 'I' must be integral");
+        return (uint8_t) (i == 0 ? order - 1 : msb_bit_order(i >> 1, (uint8_t) (order + 1)));
+    }
+
+    template <typename I>
+    constexpr I cpow(I i, uint8_t power, I r = 1) noexcept {
+        static_assert(std::is_integral<I>::value, "typename 'I' must be integral");
+        return power == 0 ? r : (power % 2 == 0 ? cpow(i*i, (uint8_t) (power / 2), r) : cpow(i, --power, r*i) );
+    }
+
+    template <typename I>
+    bool is_pow2 (I i)
+    {
+        static_assert(std::is_integral<I>::value, "typename 'I' must be integral");
+        return ((i != 0) && !(i & (i - 1)));
+    }
+
     /**
      * \see https://stackoverflow.com/questions/18939882/raw-pointer-lookup-for-sets-of-unique-ptrs
      */

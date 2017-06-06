@@ -5,6 +5,7 @@
 #include <cctype>
 #include <algorithm>
 
+
 namespace npct::utils::string
 {
 
@@ -20,6 +21,9 @@ namespace npct::utils::string
         return std::equal(std::begin(x), std::end(x), std::begin(y), __ascii_icmp_pred);
 
     }
+
+
+
 
 }
 
