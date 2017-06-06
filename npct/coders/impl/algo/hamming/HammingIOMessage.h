@@ -9,10 +9,25 @@ namespace npct::coders::impl::algo::hamming
     {
     public:
         ~HammingIOMessage() override = default;
-        HammingIOMessage(const CoderMessage &base) : CoderMessage(base), data(base.underlying["data"].get<std::string>()) {}
 
-        std::string data;
+        HammingIOMessage() = default;
+        HammingIOMessage(const HammingIOMessage &) = default;
+        HammingIOMessage(HammingIOMessage &&) noexcept = default;
 
+        HammingIOMessage(const CoderMessage &base) : CoderMessage(base), input(base.underlying["input"].get<std::string>()) {}
+
+        nlohmann::json to_json() const override {
+            underlying["input"] = input;
+            // stats
+            auto j = nlohmann::json();
+            j["decode_errors"] = decode_errors;
+
+            underlying["hamming"] = j;
+            return underlying;
+        }
+
+        std::string input;
+        size_t decode_errors = { 0 };
     };
 
 }

@@ -36,8 +36,16 @@ namespace npct::coders::impl
         {
             session->send(CoderErrorMessage(e, *message));
         }
+        catch (const std::runtime_error &e)
+        {
+            session->send(CoderErrorMessage(
+                    CoderError(ECoderErrorCodes::E_INTERNAL_SERVER_ERROR,
+                               e.what()), *message));
+        }
         catch (...) {
-            session->send(CoderErrorMessage(CoderError(ECoderErrorCodes::E_INTERNAL_SERVER_ERROR, "Unknown message format sent or error occured during processing"), *message));
+            session->send(CoderErrorMessage(
+                    CoderError(ECoderErrorCodes::E_INTERNAL_SERVER_ERROR,
+                               "Unknown message format sent or error occured during processing"), *message));
         }
 
     }
