@@ -83,8 +83,6 @@ Here is the list of tests:
     * `testDecodeSingleError` - 
     test Hamming can detect errors and 
     decode itself (**with 1 error**)
-    * `testDecodeSingleError` - 
-    test Hamming can detect errors (**with 2 error**)
         
      
 * `test_shannon_fano.py` 
