@@ -36,17 +36,25 @@ namespace npct::log
         virtual ~ILogger() = default;
         
         virtual void log(LogLevel log_level, const StringClass &msg) = 0;
-        virtual void log(LogLevel log_level, const CharClass *msg) = 0;
         virtual void log(LogLevel log_level, const CharClass *msg,  ...) = 0;
 
         virtual LoggerCapabilites capabilites() const = 0;
 
-        static std::unique_ptr<ILogger<StringClass>> GetRoot(LogLevel log_level) noexcept(false) {
+
+        virtual void setLevel(LogLevel log_level) = 0;
+        virtual LogLevel getLevel() const = 0;
+
+        static std::shared_ptr<ILogger<StringClass>> GetRoot(LogLevel log_level) noexcept(false) {
             throw npct::common::errors::NotImplementedError(
                     "ILogger::GetRoot()",
                     "Cannot call GetRoot on a base class");
         }
 
+        static std::shared_ptr<ILogger<StringClass>> GetRoot() noexcept(false) {
+            throw npct::common::errors::NotImplementedError(
+                    "ILogger::GetRoot()",
+                    "Cannot call GetRoot on a base class");
+        }
     };
 
 }
