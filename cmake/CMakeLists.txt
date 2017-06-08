@@ -97,6 +97,9 @@ if(CMAKE_BUILD_TYPE MATCHES Release)
     add_custom_command(TARGET npct POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy_directory
             "${CMAKE_SOURCE_DIR}/../configs" $<TARGET_FILE_DIR:npct>/configs)
+    add_custom_command(TARGET npct POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+            "${CMAKE_SOURCE_DIR}/../tests/client" $<TARGET_FILE_DIR:npct>/tests)
 endif(CMAKE_BUILD_TYPE MATCHES Release)
 
 # also - link necessary libaries
