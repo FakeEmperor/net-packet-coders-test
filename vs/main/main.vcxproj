@@ -76,9 +76,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalOptions>/std:c++latest -D_SCL_SECURE_NO_WARNINGS -DASIO_STANDALONE -DASIO_HEADER_ONLY %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../include;$(SolutionDir)../npct;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/std:c++latest -D_SCL_SECURE_NO_WARNINGS -DASIO_STANDALONE -DASIO_HEADER_ONLY -DNPCT_LOG_ENABLE_LOG4CPP -D_WIN32_WINNT=0x0501 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../include;$(SolutionDir)../build_deps/log4cpp/include;$(SolutionDir)../npct;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>log4cpp*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -121,7 +124,6 @@
     </ClCompile>
     <ClCompile Include="..\..\npct\*\*\*\*.cc" />
     <ClCompile Include="..\..\npct\*\*\*\*\*.cc" />
-	
     <ClCompile Include="..\..\include\*\*.cc" />
     <ClCompile Include="..\..\include\*\*\*.cc" />
     <ClCompile Include="..\..\include\*\*\*\*.cc" />
@@ -139,6 +141,11 @@
     <ClInclude Include="..\..\npct\*\*\*\*.tcc" />
     <ClInclude Include="..\..\npct\*\*\*\*\*.tcc" />
     <ClInclude Include="..\..\npct\*\*\*\*\*\*.tcc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\build_deps\log4cpp\msvc10\log4cppLIB\log4cppLIB.vcxproj">
+      <Project>{afa856a0-2388-4673-9277-ce4061709569}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
